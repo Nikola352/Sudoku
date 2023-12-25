@@ -1,3 +1,10 @@
+/**
+ * @file FileIO.hpp
+ * @brief Implements functions for loading and saving boards to files.
+ * @author Nikola Jolovic
+ * @date 25.12.2023.
+ */
+
 #include <string>
 #include <fstream>
 #include "../Sudoku/Board.hpp"
