@@ -364,3 +364,6 @@ FodyWeavers.xsd
 
 # Doxygen
 doxygen/
+
+# Gameplay generated files
+files/
