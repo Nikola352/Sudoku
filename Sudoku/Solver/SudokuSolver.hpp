@@ -8,6 +8,7 @@
 #pragma once
 
 #include "../Sudoku/Board.hpp"
+#include "../Sudoku/MarkedBoard.hpp"
 
 namespace Solver {
     /**
