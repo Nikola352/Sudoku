@@ -24,12 +24,17 @@ namespace Checker{
 		bool isValid(const Sudoku::Board& board);
 
 		/**
-		* @brief Returns true if the board is a correct solution to the start_board. Sets correct_values, incorrect_values and empty_cells to their respective counts.
+		* @brief Returns true if the board is a correct solution to the start_board. Sets \p correct_values, \p incorrect_values and \p empty_cells to their respective counts.
+		* 
+		* @details Returns true if the \p board is a correct solution to the \p start_board, false otherwise. 
+		Sets \p correct_values, \p incorrect_values and \p empty_cells to their respective counts. 
+		Incorrect value count is defined as the number of cells that have a same-value neighbour + the number of cells that don't match the start_board.
+		* 
 		* @param board The board with the solution to be validated.
 		* @param start_board The starting configuration of the board.
-		* @correct_values Reference to the variable where the number of correctly placed values should be saved.
-		* @incorrect_values Reference to the variable where the number of incorrectly placed values should be saved.
-		* @empty_cells Reference to the variable where the number of cells that are left empty should be saved.
+		* @param correct_values Reference to the variable where the number of correctly placed values should be saved.
+		* @param incorrect_values Reference to the variable where the number of incorrectly placed values should be saved.
+		* @param empty_cells Reference to the variable where the number of cells that are left empty should be saved.
 		*/
 		bool isSolved(
 			const Sudoku::Board& board, const Sudoku::Board& start_board,
