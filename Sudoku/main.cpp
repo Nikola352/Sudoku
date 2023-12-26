@@ -10,15 +10,24 @@
 #include "Sudoku\Sudoku.hpp"
 #include "Menu\Menu.hpp"
 #include "FileIO\FileIO.hpp"
+#include "CommandLine\ArgumentParser.hpp"
 
 int main(int argc, char *argv[])
 {
-    if(argc != 3){
-        std::cerr << "Usage: " << argv[0] << " [start_filepath] [solution_filepath]\n";
+    CommandLine::ArgumentParser cmdArgParser(argc, argv);
+    try{
+        cmdArgParser.parse();
+    }
+    catch(const std::invalid_argument& e){
+        std::cerr << e.what() << '\n';
+        std::cerr << "Usage: " << argv[0] << " [-u] [-d <e|m|h>] <start_filename> <solution_filename>\n";
         return 1;
     }
 
-    Sudoku::Sudoku game(argv[1], argv[2]);
+    Sudoku::Sudoku game(
+        cmdArgParser.getStartFilename(), cmdArgParser.getSolutionFilename(),
+        cmdArgParser.getDifficulty(), cmdArgParser.getUnique()
+    );
 
     Menu::printWelcomeMessage();
 
