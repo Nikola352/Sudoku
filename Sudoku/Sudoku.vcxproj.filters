@@ -42,6 +42,9 @@
     <ClCompile Include="Sudoku\MarkedBoard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CommandLine\ArgumentParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constants.hpp">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sudoku\MarkedBoard.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLine\ArgumentParser.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

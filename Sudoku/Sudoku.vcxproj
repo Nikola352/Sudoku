@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandLine\ArgumentParser.cpp" />
     <ClCompile Include="Sudoku\Board.cpp" />
     <ClCompile Include="FileIO\FileIO.cpp" />
     <ClCompile Include="main.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="Solver\SudokuSolver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandLine\ArgumentParser.hpp" />
     <ClInclude Include="Sudoku\Board.hpp" />
     <ClInclude Include="Constants.hpp" />
     <ClInclude Include="FileIO\FileIO.hpp" />

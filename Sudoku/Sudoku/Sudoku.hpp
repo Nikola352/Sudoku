@@ -27,7 +27,7 @@ namespace Sudoku{
          * @param start_filename Path to the file where the start board is stored.
          * @param solution_filename Path to the file where the solution board is stored.
          */
-		Sudoku(std::string start_filename, std::string solution_filename);
+		Sudoku(std::string start_filename, std::string solution_filename, Generator::Difficulty difficulty, bool unique_solution);
 
         /**
          * @brief Getter for round_counter.

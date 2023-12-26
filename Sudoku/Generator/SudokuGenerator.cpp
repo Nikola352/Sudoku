@@ -17,9 +17,9 @@
 #include "../Constants.hpp"
 
 namespace Generator{
-	SudokuGenerator::SudokuGenerator() : difficulty(MEDIUM), unique(true), random_gen(time(0)) {}
+	SudokuGenerator::SudokuGenerator() : difficulty(MEDIUM), unique(false), random_gen(time(0)) {}
 
-	SudokuGenerator::SudokuGenerator(Difficulty difficulty=MEDIUM, bool unique=true)
+	SudokuGenerator::SudokuGenerator(Difficulty difficulty=MEDIUM, bool unique=false)
 		: difficulty(difficulty), unique(unique), random_gen(time(0)) {}
 
 	void SudokuGenerator::fillBoard(Sudoku::Board& board){
