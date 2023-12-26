@@ -8,7 +8,7 @@
 #pragma once
 
  /**
-  * @namespace menu
+  * @namespace Menu
   * @brief Contains utilities for game UI through stdin and stdout.
   */
 namespace Menu {
