@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -127,7 +127,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Sudoku.cpp" />
+    <ClCompile Include="Sudoku\Board.cpp" />
+    <ClCompile Include="FileIO\FileIO.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu\Menu.cpp" />
+    <ClCompile Include="Generator\SudokuGenerator.cpp" />
+    <ClCompile Include="Sudoku\MarkedBoard.cpp" />
+    <ClCompile Include="Sudoku\Sudoku.cpp" />
+    <ClCompile Include="Checker\SudokuChecker.cpp" />
+    <ClCompile Include="Solver\SudokuSolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sudoku\Board.hpp" />
+    <ClInclude Include="Constants.hpp" />
+    <ClInclude Include="FileIO\FileIO.hpp" />
+    <ClInclude Include="Menu\Menu.hpp" />
+    <ClInclude Include="Generator\SudokuGenerator.hpp" />
+    <ClInclude Include="Sudoku\MarkedBoard.hpp" />
+    <ClInclude Include="Sudoku\Sudoku.hpp" />
+    <ClInclude Include="Checker\SudokuChecker.hpp" />
+    <ClInclude Include="Solver\SudokuSolver.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="files\start_board.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

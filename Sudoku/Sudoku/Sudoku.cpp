@@ -1,3 +1,10 @@
+/**
+ * @file Sudoku.cpp
+ * @brief Implementation of the Sudoku class with the game logic.
+ * @author Nikola Jolovic
+ * @date 26.12.2023
+ */
+
 #include <string>
 #include "Sudoku.hpp"
 #include "../FileIO/FileIO.hpp"
@@ -52,7 +59,6 @@ namespace Sudoku {
 	bool Sudoku::validate() {
 		return this->checker.isSolved(
 			this->game_board, this->start_board,
-			this->solver,
 			this->correct_values, this->incorrect_values, this->empty_cells
 		);
 	}
