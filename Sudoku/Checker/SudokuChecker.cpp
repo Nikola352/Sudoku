@@ -81,14 +81,24 @@ namespace Checker{
 			}
 		}
 
+		bool is_tempered_with = false; // indicates wether the numbers from the initial board were changed.
 		correct_values = incorrect_values = empty_cells = 0;
 		for(int i=0; i<BOARD_SIZE; i++){
 			for(int j=0; j<BOARD_SIZE; j++){
-				if(board[i][j] == Constants::EMPTY_CELL)
+				if(board[i][j] == Constants::EMPTY_CELL){
 					empty_cells++;
+					if(start_board[i][j] != Constants::EMPTY_CELL){
+						is_tempered_with = true;
+					}
+				}
 				int idx = Constants::KEY_IDX.at(board[i][j]);
-				if(start_board[i][j] != Constants::EMPTY_CELL)
+				if(start_board[i][j] != Constants::EMPTY_CELL){
+					if(board[i][j] != start_board[i][j]){
+						is_tempered_with = true;
+						incorrect_values++;
+					}
 					continue;
+				}
 				if(rows[i][idx] > 1)
 					incorrect_values++;
 				else if(cols[j][idx] > 1)
@@ -100,6 +110,6 @@ namespace Checker{
 			}
 		}
 
-		return (incorrect_values == 0 && empty_cells == 0);
+		return (!is_tempered_with && incorrect_values == 0 && empty_cells == 0);
 	}
 }
