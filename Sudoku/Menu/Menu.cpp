@@ -52,3 +52,7 @@ bool Menu::promptGameExit(){
 void Menu::printInputError(){
 	std::cout << "The provided board is not valid.\n";
 }
+
+void Menu::printUnsolvable(){
+	std::cout << "The provided Sudoku puzzle has no solution.\n";
+}

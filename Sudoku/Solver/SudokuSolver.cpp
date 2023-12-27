@@ -14,9 +14,9 @@
 using Constants::BOARD_SIZE;
 
 namespace Sudoku{
-	void SudokuSolver::solve(const Board& start_board, MarkedBoard& solution_board) const {
+	bool SudokuSolver::solve(const Board& start_board, MarkedBoard& solution_board) const {
 		solution_board = start_board;
-		this->solve(solution_board, 0, 0);
+		return this->solve(solution_board, 0, 0);
 	}
 
 	bool SudokuSolver::solve(MarkedBoard& board, int ri, int ci) const {

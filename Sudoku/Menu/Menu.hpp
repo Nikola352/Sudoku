@@ -48,4 +48,9 @@ namespace Menu {
      * @brief Prints an error message in case of invalid input board values.
     */
     void printInputError();
+
+    /**
+     * @brief Prints an error message in case of an unsolvable puzzle.
+    */
+    void printUnsolvable();
 }

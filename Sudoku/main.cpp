@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
         if(Menu::promptSolverIsUser()){
             game.loadSolvedBoardFromFile();
         } else {
-            game.solve();
+            if(!game.solve()){
+                Menu::printUnsolvable();
+                continue;
+            }
         }
         bool is_valid = game.validate();
         game.incrementRoundCounter();

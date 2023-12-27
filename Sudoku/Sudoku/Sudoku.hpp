@@ -84,9 +84,11 @@ namespace Sudoku{
         /**
          * @brief Solves the Sudoku.
          * 
-         * @details Solves the Sudoku and saves the solution to this->solution_filename file.
+         * @details Solves the Sudoku and saves the solution to this->solution_filename file if there is a valid solution.
+         * 
+         * @return True if the start_board has a solution, false otherwise.
          */
-		void solve();
+		bool solve();
 
         /**
          * @brief Validates the game.

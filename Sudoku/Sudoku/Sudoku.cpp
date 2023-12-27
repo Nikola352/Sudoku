@@ -51,9 +51,11 @@ namespace Sudoku {
 		FileIO::saveToFile(this->start_filename, this->start_board);
 	}
 
-	void Sudoku::solve() {
-		this->solver.solve(this->start_board, this->game_board);
+	bool Sudoku::solve() {
+		if(!this->solver.solve(this->start_board, this->game_board))
+			return false;
 		FileIO::saveToFile(this->solution_filename, this->game_board);
+		return true;
 	}
 
 	bool Sudoku::validate() {

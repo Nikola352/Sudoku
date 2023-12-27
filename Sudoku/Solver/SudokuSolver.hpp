@@ -19,13 +19,15 @@ namespace Sudoku {
         /**
          * @brief Solves the Sudoku puzzle starting from the given board and updates the solution_board.
          * 
-         * @details Solves the Sudoku puzzle starting from the given board and updates the solution_board. 
-         * Assumes that \p start_board is valid.
+         * @details Tries to solve the Sudoku puzzle starting from the given board and updates the solution_board. 
+         * Assumes that \p start_board is valid. If no solution exists, it returns false and the \p solution_board is not changed.
          * 
          * @param start_board The initial Sudoku board.
          * @param solution_board The Sudoku board to store the solution.
+         * 
+         * @return True if the \p start_board has a solution, false otherwise.
          */
-        void solve(const Board& start_board, MarkedBoard& solution_board) const;
+        bool solve(const Board& start_board, MarkedBoard& solution_board) const;
 
     private:
         /**
