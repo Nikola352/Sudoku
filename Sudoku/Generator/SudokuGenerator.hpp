@@ -53,6 +53,20 @@ namespace Sudoku{
          */
 		void generateBoard(Board& board);
 
+        /**
+         * @brief Sets the difficulty level for the Sudoku generation.
+         * 
+         * @param difficulty The new difficulty level.
+         */
+        void setDifficulty(Difficulty difficulty);
+
+        /**
+         * @brief Sets the uniqueness for the Sudoku generation.
+         * 
+         * @param unique True if the generated solution must be unique, false otherwise.
+         */
+        void setUnique(bool unique);
+
 	private:
 		bool unique; /**< Indicates if the generated solution must be unique. */
 		Difficulty difficulty; /**< Difficulty level of the generated Sudoku. */

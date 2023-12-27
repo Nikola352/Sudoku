@@ -22,6 +22,14 @@ namespace Sudoku{
 	SudokuGenerator::SudokuGenerator(Difficulty difficulty=MEDIUM, bool unique=false)
 		: difficulty(difficulty), unique(unique), random_gen(time(0)) {}
 
+	void SudokuGenerator::setDifficulty(Difficulty difficulty){
+		this->difficulty = difficulty;
+	}
+
+	void SudokuGenerator::setUnique(bool unique){
+		this->unique = unique;
+	}
+
 	void SudokuGenerator::fillBoard(Board& board){
 		MarkedBoard marked_board = board;
 		this->fillBoardFrom(marked_board, 0, 0);
