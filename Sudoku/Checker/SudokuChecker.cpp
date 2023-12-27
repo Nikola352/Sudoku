@@ -89,6 +89,7 @@ namespace Sudoku{
 					if(start_board[i][j] != Constants::EMPTY_CELL){
 						is_tempered_with = true;
 					}
+					continue;
 				}
 				int idx = Constants::KEY_IDX.at(board[i][j]);
 				if(start_board[i][j] != Constants::EMPTY_CELL){
