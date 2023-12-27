@@ -25,6 +25,12 @@ namespace Sudoku {
         Board();
 
         /**
+         * @brief Constructor. Creates a Sudoku board from the given char matrix.
+         * @param board The 2D char array to create the Sudoku board from.
+         */
+        Board(const char board[BOARD_SIZE][BOARD_SIZE]);
+
+        /**
          * @brief Copy constructor. Performs a deep copy of the Sudoku board.
          * @param other The Sudoku board to copy.
          */

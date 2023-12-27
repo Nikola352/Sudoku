@@ -17,6 +17,17 @@ using Constants::BLOCK_SIZE;
 namespace Sudoku {
 	Board::Board(): board() {}
 
+	Board::Board(const char board[BOARD_SIZE][BOARD_SIZE]) {
+		for(int i=0; i<BOARD_SIZE; i++){
+			for(int j=0; j<BOARD_SIZE; j++){
+				if(board[i][j] == ' ')
+					this->board[i][j] = Constants::EMPTY_CELL;
+				else
+					this->board[i][j] = board[i][j];
+			}
+		}
+	}
+
 	Board::Board(const Board& other): board() {
 		for(int i=0; i<BOARD_SIZE; i++){
 			for(int j=0; j<BOARD_SIZE; j++){
