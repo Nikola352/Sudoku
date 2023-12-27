@@ -18,6 +18,10 @@ namespace Sudoku {
     public:
         /**
          * @brief Solves the Sudoku puzzle starting from the given board and updates the solution_board.
+         * 
+         * @details Solves the Sudoku puzzle starting from the given board and updates the solution_board. 
+         * Assumes that \p start_board is valid.
+         * 
          * @param start_board The initial Sudoku board.
          * @param solution_board The Sudoku board to store the solution.
          */
