@@ -10,7 +10,7 @@
 #include "../FileIO/FileIO.hpp"
 
 namespace Sudoku {
-	Sudoku::Sudoku(std::string start_filename, std::string solution_filename, Generator::Difficulty difficulty, bool unique_solution) 
+	Sudoku::Sudoku(std::string start_filename, std::string solution_filename, Difficulty difficulty, bool unique_solution) 
 		: round_counter(0), correct_values(0), incorrect_values(0), empty_cells(0),
 		start_board(), game_board(),
 		generator(difficulty, unique_solution), checker(), solver(),

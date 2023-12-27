@@ -13,7 +13,7 @@
 
 namespace CommandLine{
 	ArgumentParser::ArgumentParser(int argc, char *argv[])
-		: args(argv+1, argv+argc), is_valid(false), unique_solution(false), difficulty(Generator::Difficulty::MEDIUM) {}
+		: args(argv+1, argv+argc), is_valid(false), unique_solution(false), difficulty(Sudoku::Difficulty::MEDIUM) {}
 
 	inline bool file_exists(const std::string& filename) {
 		std::ifstream f(filename.c_str());
@@ -41,13 +41,13 @@ namespace CommandLine{
 					switch(this->args[i][0])
 					{
 					case 'e':
-						this->difficulty = Generator::Difficulty::EASY;
+						this->difficulty = Sudoku::Difficulty::EASY;
 						break;
 					case 'm':
-						this->difficulty = Generator::Difficulty::MEDIUM;
+						this->difficulty = Sudoku::Difficulty::MEDIUM;
 						break;
 					case 'h':
-						this->difficulty = Generator::Difficulty::HARD;
+						this->difficulty = Sudoku::Difficulty::HARD;
 						break;
 					default:
 						this->is_valid = false;
@@ -96,7 +96,7 @@ namespace CommandLine{
 		return this->filenames[1];
 	}
 
-	Generator::Difficulty ArgumentParser::getDifficulty(){
+	Sudoku::Difficulty ArgumentParser::getDifficulty(){
 		if(!this->is_valid){
 			throw std::invalid_argument("Unhandled invalid command line arguments list.");
 		}

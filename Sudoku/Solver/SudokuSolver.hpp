@@ -10,7 +10,7 @@
 #include "../Sudoku/Board.hpp"
 #include "../Sudoku/MarkedBoard.hpp"
 
-namespace Solver {
+namespace Sudoku {
     /**
      * @brief Sudoku solver class that solves a given Sudoku puzzle.
      */
@@ -21,7 +21,7 @@ namespace Solver {
          * @param start_board The initial Sudoku board.
          * @param solution_board The Sudoku board to store the solution.
          */
-        void solve(const Sudoku::Board& start_board, Sudoku::MarkedBoard& solution_board) const;
+        void solve(const Board& start_board, MarkedBoard& solution_board) const;
 
     private:
         /**
@@ -31,6 +31,6 @@ namespace Solver {
          * @param colIdx The current column index being processed.
          * @return True if the puzzle is successfully solved, false otherwise.
          */
-        bool solve(Sudoku::MarkedBoard& board, int rowIdx, int colIdx) const;
+        bool solve(MarkedBoard& board, int rowIdx, int colIdx) const;
     };
 }

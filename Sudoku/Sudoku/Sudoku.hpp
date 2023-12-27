@@ -27,7 +27,7 @@ namespace Sudoku{
          * @param start_filename Path to the file where the start board is stored.
          * @param solution_filename Path to the file where the solution board is stored.
          */
-		Sudoku(std::string start_filename, std::string solution_filename, Generator::Difficulty difficulty, bool unique_solution);
+		Sudoku(std::string start_filename, std::string solution_filename, Difficulty difficulty, bool unique_solution);
 
         /**
          * @brief Getter for round_counter.
@@ -108,8 +108,8 @@ namespace Sudoku{
 		std::string start_filename; /**< Path to the file where the start board is stored. */
 		std::string solution_filename; /**< Path to the file where the solution board is stored. */
 
-		Generator::SudokuGenerator generator; /**< Sudoku generator. */
-		Checker::SudokuChecker checker; /**< Sudoku checker. */
-		Solver::SudokuSolver solver; /**< Sudoku solver. */
+		SudokuGenerator generator; /**< Sudoku generator. */
+		SudokuChecker checker; /**< Sudoku checker. */
+		SudokuSolver solver; /**< Sudoku solver. */
 	};
 }

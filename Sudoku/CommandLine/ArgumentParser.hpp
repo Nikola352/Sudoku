@@ -53,10 +53,10 @@ namespace CommandLine{
 
         /**
          * @brief Gets the difficulty.
-         * @return Generator::Difficulty the difficulty
+         * @return Sudoku::Difficulty the difficulty
          * @throw std::invalid_argument if the arguments are invalid or if they have not been parsed yet
          */
-		Generator::Difficulty getDifficulty();
+		Sudoku::Difficulty getDifficulty();
 
         /**
          * @brief Checks if the unique flag is passed.
@@ -70,7 +70,7 @@ namespace CommandLine{
 
 		bool is_valid; /**<  Flag that indicates if the arguments are valid */
 		std::vector<std::string> filenames; /**<  Filenames for start and solution boards. Should contain exactly 2 values after a valid parse. */
-		Generator::Difficulty difficulty; /**<  Difficulty for SudokuGenerator */
+		Sudoku::Difficulty difficulty; /**<  Difficulty for SudokuGenerator */
 		bool unique_solution; /**<  Flag that indicates if the unique flag is passed */
 	};
 }

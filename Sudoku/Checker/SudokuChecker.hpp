@@ -11,7 +11,7 @@
 #include "../Sudoku/Board.hpp"
 #include "../Constants.hpp"
 
-namespace Checker{
+namespace Sudoku{
 	/**
 	* @brief Sudoku checker class with board validation utilities.
 	*/
@@ -21,7 +21,7 @@ namespace Checker{
 		* @brief Returns true if the board setup is valid. The setup is considered valid if the 3 rules of Sudoku are satisfied.
 		* @param board The board to be validated.
 		*/
-		bool isValid(const Sudoku::Board& board);
+		bool isValid(const Board& board);
 
 		/**
 		* @brief Returns true if the board is a correct solution to the start_board. Sets \p correct_values, \p incorrect_values and \p empty_cells to their respective counts.
@@ -36,10 +36,7 @@ namespace Checker{
 		* @param incorrect_values Reference to the variable where the number of incorrectly placed values should be saved.
 		* @param empty_cells Reference to the variable where the number of cells that are left empty should be saved.
 		*/
-		bool isSolved(
-			const Sudoku::Board& board, const Sudoku::Board& start_board,
-			int& correct_values, int& incorrect_values, int& empty_cells
-		) const;
+		bool isSolved(const Board& board, const Board& start_board, int& correct_values, int& incorrect_values, int& empty_cells) const;
 	private:
 		std::bitset<Constants::BOARD_SIZE> valueSet;
 	};

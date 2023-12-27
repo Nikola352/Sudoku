@@ -13,9 +13,8 @@
 
 using Constants::BOARD_SIZE;
 using Constants::BLOCK_SIZE;
-using Sudoku::Board;
 
-namespace Checker{
+namespace Sudoku{
 	bool SudokuChecker::isValid(const Board& board) {
 		// distinct values in every row
 		for(int i=0; i<BOARD_SIZE; i++){
