@@ -18,7 +18,7 @@ protected:
 	}
 };
 
-TEST_F(FileIOTest, ValidSolve) {
+TEST_F(FileIOTest, InputOutputTest) {
 	Sudoku::Board board(TestConstants::valid_matrix);
 	FileIO::saveToFile(path, board);
 
