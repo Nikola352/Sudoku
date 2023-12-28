@@ -20,13 +20,13 @@ namespace Sudoku{
 	}
 
 	bool SudokuSolver::solve(MarkedBoard& board, int ri, int ci) const {
-		while(ri < 9 && board[ri][ci] != Constants::EMPTY_CELL){
-			if(++ci == 9){
+		while(ri < BOARD_SIZE && board[ri][ci] != Constants::EMPTY_CELL){
+			if(++ci == BOARD_SIZE){
 				ci = 0;
 				ri++;
 			}
 		}
-		if(ri == 9) return true;
+		if(ri == BOARD_SIZE) return true;
 		std::bitset<BOARD_SIZE> taken = 
 			board.rowSets[ri] | board.colSets[ci] | board.blockSets[Board::getBlockNum(ri, ci)];
 		for(int k=0; k<BOARD_SIZE; k++){

@@ -37,13 +37,13 @@ namespace Sudoku{
 	}
 
 	bool SudokuGenerator::fillBoardFrom(MarkedBoard& board, int ri, int ci){
-		while(ri < 9 && board[ri][ci] != Constants::EMPTY_CELL){
-			if(++ci == 9){
+		while(ri < BOARD_SIZE && board[ri][ci] != Constants::EMPTY_CELL){
+			if(++ci == BOARD_SIZE){
 				ci = 0;
 				ri++;
 			}
 		}
-		if(ri == 9) return true;
+		if(ri == BOARD_SIZE) return true;
 		std::bitset<BOARD_SIZE> taken =
 			board.rowSets[ri] | board.colSets[ci] | board.blockSets[Board::getBlockNum(ri, ci)];
 		std::vector<int> possible;
@@ -99,13 +99,13 @@ namespace Sudoku{
 	}
 
 	int SudokuGenerator::solutionCount(MarkedBoard& board, int ri=0, int ci=0){
-		while(ri < 9 && board[ri][ci] != Constants::EMPTY_CELL){
-			if(++ci == 9){
+		while(ri < BOARD_SIZE && board[ri][ci] != Constants::EMPTY_CELL){
+			if(++ci == BOARD_SIZE){
 				ci = 0;
 				ri++;
 			}
 		}
-		if(ri == 9) return 1;
+		if(ri == BOARD_SIZE) return 1;
 		int solution_cnt = 0;
 		std::bitset<BOARD_SIZE> taken =
 			board.rowSets[ri] | board.colSets[ci] | board.blockSets[Board::getBlockNum(ri, ci)];
