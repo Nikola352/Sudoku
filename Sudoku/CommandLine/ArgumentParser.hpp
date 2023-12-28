@@ -11,6 +11,9 @@
 #include <string>
 #include "../Generator/SudokuGenerator.hpp"
 
+/**
+ * @brief Contains all classes and functions related to the command line arguments.
+ */
 namespace CommandLine{
     /**
      * @brief Parses command line arguments and stores them in a class.
